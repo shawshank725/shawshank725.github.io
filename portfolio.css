@@ -92,3 +92,38 @@ body {
 a:visited {
   color: #0000FF; /* Color for visited links (same as unvisited) */
 }
+
+
+.social-media-div {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.social-media-link {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.social-media-icon {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.social-media-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.social-media-icon:active {
+    transform: scale(0.9);
+}
