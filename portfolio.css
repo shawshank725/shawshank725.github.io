@@ -93,7 +93,6 @@ a:visited {
   color: #0000FF; /* Color for visited links (same as unvisited) */
 }
 
-
 .social-media-div {
     position: fixed;
     top: 10px;
@@ -126,4 +125,28 @@ a:visited {
 
 .social-media-icon:active {
     transform: scale(0.9);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about, .skills {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .social-media-div {
+        top: 5px;
+        right: 5px;
+        padding: 5px;
+        gap: 5px;
+    }
+
+    .social-media-link {
+        width: 30px;
+        height: 30px;
+    }
 }
