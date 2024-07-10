@@ -150,3 +150,40 @@ a:visited {
         height: 30px;
     }
 }
+.projects {
+    padding: 40px;
+    background-color: #fff;
+    color: #333;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.project-box {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #f9f9f9;
+}
+
+.project-box h2 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.project-box p {
+    margin: 10px 0;
+    font-weight: 400;
+}
+
+.project-box a {
+    color: #04AA6D;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.project-box a:hover {
+    text-decoration: underline;
+}
