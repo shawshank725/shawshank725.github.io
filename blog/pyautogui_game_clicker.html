@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automating Game Clicks</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#policy">Policy</a>
+    </div>
+
+    <h1>Automating Game Clicks</h1>
+    <p>Use the following Python code to automate clicking on a specific button in a game. You can change the values according to your choice.</p>
+    <div class="code-block">
+        <button id="copy-button">Copy Code</button>
+        <pre id="python-code">
+import pygetwindow as gw
+import pyautogui, time
+
+print(gw.getAllTitles())
+chrome_window = None
+
+def game_functions():
+    print("function invoked")
+    level_play_x = 567
+    level_play_y = 503
+
+    collect_coins_x = 553
+    collect_coins_y = 573
+
+    collect_coins_3x = 637
+    collect_coins_3y = 388
+    time.sleep(1)
+    pyautogui.click(level_play_x, level_play_y)
+    time.sleep(1)  # time gap for meter
+    pyautogui.click(level_play_x, level_play_y)  # click on meter
+
+    for i in range(3):
+        time.sleep(1)
+        pyautogui.click(level_play_x, level_play_y)
+    time.sleep(8)
+    pyautogui.click(collect_coins_3x, collect_coins_3y)
+    time.sleep(14)
+
+for window in gw.getAllTitles():
+    if "chrome" in window.lower():  # You can adjust this condition based on your window title
+        chrome_window = gw.getWindowsWithTitle(window)[0]
+        chrome_window.activate()
+
+        while True:
+            game_functions()
+        </pre>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

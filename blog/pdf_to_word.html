@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converting PDF to Word file</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#policy">Policy</a>
+    </div>
+
+    <h1>Converting PDF to Word file</h1>
+    <p>Use the following python code to convert PDF to Word file. The required modules need to be installed using pip command.</p>
+    <div class="code-block">
+        <button id="copy-button">Copy Code</button>
+        <pre id="python-code">
+# Import the required modules
+from pdf2docx import Converter
+
+# Keeping the PDF's location in a separate variable
+pdf_file = r"pps.pdf"
+
+# Maintaining the Document's path in a separate variable
+docx_file = r"pps.docx"
+
+# Using the built-in function, convert the PDF file to a document file by saving it in a variable.
+cv = Converter(pdf_file)
+
+# Storing the Document in the variable's initialised path
+cv.convert(docx_file)
+
+# Conversion closure through the function close()
+cv.close()            
+        </pre>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converting Word to PDF file</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#policy">Policy</a>
+    </div>
+
+    <h1>Converting Word to PDF file</h1>
+    <p>Use the following python code to convert Word to PDF file. The required modules need to be installed using pip command.</p>
+    <div class="code-block">
+        <button id="copy-button">Copy Code</button>
+        <pre id="python-code">
+from docx2pdf import convert
+
+# Converting docx present in the same folder
+# as the python file
+convert("pps.docx")
+
+# Converting docx specifying both the input 
+# and output paths
+convert("pps.docx", "pps_converted.pdf")
+        </pre>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

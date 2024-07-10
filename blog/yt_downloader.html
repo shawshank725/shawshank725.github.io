@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Downloader</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#policy">Policy</a>
+    </div>
+
+    <h1>YouTube Video Downloader</h1>
+    <p>Use the following Python code to download YouTube videos by providing the video URL.</p>
+    <div class="code-block">
+        <button id="copy-button">Copy Code</button>
+        <pre id="python-code">
+url = input('Enter URL - ')
+
+import yt_dlp as youtube_dl
+from yt_dlp.postprocessor import FFmpegPostProcessor
+FFmpegPostProcessor._ffmpeg_location.set(R'path-to-ffmpeg-module-in-python-folder')
+
+ydl_opts = {}
+with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+    ydl.download([url])
+        </pre>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

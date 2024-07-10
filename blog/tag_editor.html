@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Tag Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#policy">Policy</a>
+    </div>
+
+    <h1>Audio Tag Editor</h1>
+    <p>Use the following Python code to create a GUI application for editing the metadata of audio files.</p>
+    <div class="code-block">
+        <button id="copy-button">Copy Code</button>
+        <pre id="python-code">
+import tkinter as tk
+from tkinter import filedialog
+import eyed3
+
+input_box_height = 2
+pad_y = 5
+# creating application
+root = tk.Tk()
+root.title("Audio Tag Editor")
+root.geometry("900x600")
+root.configure(bg='#add8e6')
+
+big_frame = tk.Frame(root, bg='#add8e6')
+big_frame.pack()
+
+# Setting font style
+font_style = ('Palatino', 15)
+
+text_label = tk.Label(big_frame, text="No Audio file Selected - ", bg='#add8e6', font=font_style)
+text_label.pack(pady = pad_y)
+
+def select_file():
+    file_path = filedialog.askopenfilename(filetypes=[("Mp3 Files", "*.mp3")])
+    print(file_path)
+    if file_path == '':
+        text_label.config( text="No Audio file Selected - ")
+    else:
+        text_label.config( text=file_path)
+
+def select_art_file():
+    file_path = filedialog.askopenfilename()
+    print(file_path)
+    art_path_label.config(text=file_path)
+
+def edit_file_tags():
+    input_title = title.get("1.0", "end-1c")
+    input_artist = artist.get("1.0", "end-1c")
+    input_album = album.get("1.0", "end-1c")
+    input_genre = genre.get("1.0", "end-1c")
+    input_year = year.get("1.0", "end-1c")
+    input_track_number = track_number.get("1.0", "end-1c")
+
+    audiofile = eyed3.load(text_label.cget("text"))
+    audiofile.initTag(version=(2, 3, 0))
+    audiofile.tag.artist = input_artist
+    audiofile.tag.album = input_album
+    audiofile.tag.title = input_title
+    audiofile.tag.track_num = input_track_number
+    audiofile.tag.genre = input_genre
+    audiofile.tag.year = input_year
+    with open(art_path_label.cget("text"), "rb") as image_file:
+        imagedata = image_file.read()
+        print(imagedata)
+        audiofile.tag.images.set(3, imagedata, "image/jpeg", u"cover")
+    audiofile.tag.save()
+
+select_file_button = tk.Button(big_frame, text="Select Audio File", command=select_file,font=font_style,
+                               bg='#FFA07A', bd=2, relief=tk.RAISED,cursor="hand2")
+select_file_button.pack(pady=pad_y)
+
+# labels area
+art_label = tk.Label(big_frame, text="Album Art", bg='#add8e6', font=font_style)
+art_path_label = tk.Label(big_frame, text="", bg='#add8e6', font=font_style)
+art_label.pack(pady=pad_y)
+art_path_label.pack(pady=pad_y)
+select_art_button = tk.Button(big_frame, text="Select Art File", command=select_art_file,font=font_style,
+                              bg='#FFA07A', bd=2, relief=tk.RAISED,cursor="hand2")
+select_art_button.pack(pady=pad_y)
+
+frame_1 = tk.Frame(big_frame, width=300, bg='#add8e6')
+frame_1.pack()
+frame_2 = tk.Frame(big_frame, width=300, bg='#add8e6')
+frame_2.pack()
+frame_3 = tk.Frame(big_frame, width=300, bg='#add8e6')
+frame_3.pack()
+frame_4 = tk.Frame(big_frame, width=300, bg='#add8e6')
+frame_4.pack()
+frame_5 = tk.Frame(big_frame, width=300, bg='#add8e6')
+frame_5.pack()
+frame_6 = tk.Frame(big_frame, width=300, bg='#add8e6')
+frame_6.pack()
+
+title_label = tk.Label(frame_1, text="Title: ", bg='#add8e6', font=font_style)
+artist_label = tk.Label(frame_2, text="Artist: ", bg='#add8e6', font=font_style)
+album_label = tk.Label(frame_3, text="Album: ", bg='#add8e6', font=font_style)
+genre_label = tk.Label(frame_4, text="Genre: ", bg='#add8e6', font=font_style)
+year_label = tk.Label(frame_5, text="Year: ", bg='#add8e6', font=font_style)
+track_number_label = tk.Label(frame_6, text="Track Number: ", bg='#add8e6', font=font_style)
+
+# textbox area
+title = tk.Text(frame_1, height=input_box_height)
+artist = tk.Text(frame_2, height=input_box_height)
+album = tk.Text(frame_3, height=input_box_height)
+genre = tk.Text(frame_4, height=input_box_height)
+year = tk.Text(frame_5, height=input_box_height)
+track_number = tk.Text(frame_6, height=input_box_height)
+
+# packing labels and textbox
+title_label.pack(pady=pad_y, side=tk.LEFT)
+title.pack(fill='both', expand=True, pady=pad_y, side=tk.LEFT)
+
+artist_label.pack(pady=pad_y, side=tk.LEFT)
+artist.pack(fill='both', expand=True, pady=pad_y, side=tk.LEFT)
+
+album_label.pack(pady=pad_y, side=tk.LEFT)
+album.pack(fill='both', expand=True, pady=pad_y, side=tk.LEFT)
+
+genre_label.pack(pady=pad_y, side=tk.LEFT)
+genre.pack(fill='both', expand=True, pady=pad_y, side=tk.LEFT)
+
+year_label.pack(pady=pad_y, side=tk.LEFT)
+year.pack(fill='both', expand=True, pady=pad_y, side=tk.LEFT)
+
+track_number_label.pack(pady=pad_y, side=tk.LEFT)
+track_number.pack(fill='both', expand=True, pady=pad_y, side=tk.LEFT)
+
+make_changes_button = tk.Button(big_frame, text="Edit the File", command=edit_file_tags,font=font_style,
+                                bg='#FFA07A', bd=2, relief=tk.RAISED,cursor="hand2")
+make_changes_button.pack()
+
+root.mainloop()
+        </pre>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

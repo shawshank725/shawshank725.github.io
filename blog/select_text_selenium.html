@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selenium Web Scraper</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#policy">Policy</a>
+    </div>
+
+    <h1>Selenium Web Scraper</h1>
+    <p>Use the following Python code to scrape text from a webpage using Selenium.</p>
+    <div class="code-block">
+        <button id="copy-button">Copy Code</button>
+        <pre id="python-code">
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+
+file = open('movies name.txt', 'w+')
+
+driver = webdriver.Chrome()
+
+for i in range(2000, 2024):
+    url = "https://yekmdl1.online/Anime/Movies/" + str(i)
+    driver.get(url)
+    file.write(driver.find_element(By.XPATH, "/html/body/pre").text + '\n')
+        </pre>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
