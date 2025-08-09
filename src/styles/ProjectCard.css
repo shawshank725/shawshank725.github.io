@@ -1,0 +1,124 @@
+.projectCardContainer {
+    display: flex;
+    background-color: rgba(141, 152, 255, 0.295);
+    width: 90%;
+    flex-direction: row;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    column-gap: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 600px) {
+    
+    .allOtherImagesContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        column-gap: 10px;
+    }
+}
+
+@media screen and (max-width: 800px) { 
+    .projectCardContainer {
+        flex-direction: column;
+        row-gap: 10px;
+        align-items: center;
+    }
+}
+
+.projectImageContainer {
+    width: 200px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+
+.projectImageContainer:hover {
+    transform: translateY(-4px) scale(1.02); 
+    transition: transform 0.2s ease;
+}
+
+
+.projectImage {
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.projectDescriptionContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    flex: 1;
+}
+
+.projectHeading {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.projectTechStack {
+    font-style: italic;
+}
+
+.projectGithubUrl {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+.projectLiveDemoUrl {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background-color: #2121f0;
+    display: flex;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.6s;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.projectLiveDemoUrl:hover {
+    color: #2121f0;
+    font-weight: bold;
+    background-color: #ffffff;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.otherImageContainer {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.otherImageContainer:hover {
+    transform: translateY(-4px) scale(1.02); 
+    transition: transform 0.2s ease;
+}
+
+.otherImage {
+    height: 100%;
+    cursor: pointer;
+}
+
+.allOtherImagesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
