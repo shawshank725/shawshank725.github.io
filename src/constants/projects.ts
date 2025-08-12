@@ -36,7 +36,7 @@ export const projects: ProjectCardType[] = [
     heading: "X Clone",
     description: "A Twitter-like social media platform clone featuring authentication, posting, liking, bookmarking, following, and a clean responsive UI.",
     techStack: "React, TypeScript, Spring Boot, MySQL, Consul, JWT, Micro-services",
-    githubUrl: "https://github.com/yourusername/xclone",
+    githubUrl: "https://github.com/shawshank725/twitter-clone-spring-boot-react-microservices",
     otherImages: [
       xcloneLogin,
       xclonePostModal,
@@ -51,7 +51,7 @@ export const projects: ProjectCardType[] = [
     heading: "Inventory Management System",
     description: "An inventory management web application to sell and buy products, and handle user authentication.",
     techStack: "Spring Boot, Spring Security, Thymeleaf, Java, MySQL",
-    githubUrl: "https://github.com/shawshank725/Inventory",
+    githubUrl: "https://github.com/shawshank725/inventory",
     otherImages: [
       inventoryLogin,
       inventoryProfile,
@@ -62,7 +62,7 @@ export const projects: ProjectCardType[] = [
     heading: "TextVoid",
     description: "A simple anonymous message board built with Spring Boot and Bootstrap, inspired by 4Chan (text-only). Users can view the latest posts, browse by genre, and search posts by message content — no login required.",
     techStack: "Spring Boot, Thymeleaf, Java, Bootstrap, MySQL",
-    githubUrl: "https://github.com/shawshank725/TextVoid",
+    githubUrl: "https://github.com/shawshank725/textvoid",
     otherImages: [
       textvoidLatest,
       textvoidNew,
@@ -74,7 +74,7 @@ export const projects: ProjectCardType[] = [
     heading: "Number System Converter",
     description: "Number System Converter is a Spring Boot web application that allows users to convert numbers between binary, decimal, and hexadecimal formats through a simple and interactive interface.",
     techStack: "Spring Boot, Thymeleaf, Java, Bootstrap, MySQL",
-    githubUrl: "https://github.com/shawshank725/Number-System-Converter",
+    githubUrl: "https://github.com/shawshank725/number-system-converter",
     otherImages: [
       secondImage,thirdImage,fourthImage
     ]
