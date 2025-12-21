@@ -1,7 +1,6 @@
 import '@styles/NavigationBar.css';
 import githubIcon from "@assets/github/github-mark.png";
 import linkedIcon from "@assets/linkedin/InBug-White.png";
-import resumeIcon from "@assets/resume/resume.png";
 
 type NavigationProps = {
     homePageRef: React.RefObject<HTMLDivElement | null>;
