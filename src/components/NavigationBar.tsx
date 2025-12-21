@@ -1,6 +1,7 @@
 import '@styles/NavigationBar.css';
 import githubIcon from "@assets/github/github-mark.png";
 import linkedIcon from "@assets/linkedin/InBug-White.png";
+import resumeIcon from "@assets/resume/resume.png";
 
 type NavigationProps = {
     homePageRef: React.RefObject<HTMLDivElement | null>;
@@ -30,6 +31,11 @@ export default function NavigationBar({homePageRef, skillsPageRef, projectsPageR
                     behavior:'smooth'
                 })}}>Projects</button>
 
+                
+
+                <a className='profileLink' href='/assets/resume/resume.pdf' download={"Resume.pdf"} >
+                    <button className='navigationItem'>Resume</button>
+                </a>
                 <a className='profileLink' href='https://github.com/shawshank725' target='_blank'>
                     <img src={githubIcon} className='profileLinkImage'/>
                 </a>

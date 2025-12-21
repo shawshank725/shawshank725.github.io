@@ -9,32 +9,24 @@ import xclonePostViewer from "@assets/projects/xclone/postviewer.png";
 import xcloneProfilePage from "@assets/projects/xclone/profilepage.png";
 import xcloneRegister from "@assets/projects/xclone/register.png";
 
-// --- Inventory images ---
-import inventoryHome from "@assets/projects/inventory/home page.jpeg";
-import inventoryLogin from "@assets/projects/inventory/login.jpeg";
-import inventoryProfile from "@assets/projects/inventory/profilepage.jpeg";
-
-// --- TextVoid images ---
-import textvoidHome from "@assets/projects/textvoid/homepage.jpeg";
-import textvoidLatest from "@assets/projects/textvoid/latestposts.jpeg";
-import textvoidNew from "@assets/projects/textvoid/newposts.jpeg";
-import textvoidPosts from "@assets/projects/textvoid/posts.jpeg";
-
 // --- Game images ---
 import gameMainMenu from "@assets/projects/game/mainmenu.png";
 import gameLevel from "@assets/projects/game/level.png";
 import gameLights from "@assets/projects/game/lights.png";
 
-import firstImage from '@assets/projects/number-converter/first.jpeg';
-import secondImage from '@assets/projects/number-converter/second.jpeg';
-import thirdImage from '@assets/projects/number-converter/third.jpeg';
-import fourthImage from '@assets/projects/number-converter/fourth.jpeg';
+// --- CALM App images ---
+import logo from "@assets/projects/calm/logo.png"
+import page1 from "@assets/projects/calm/page1.jpg"
+import page2 from "@assets/projects/calm/page2.jpg"
+import page3 from "@assets/projects/calm/page3.jpg"
+import page4 from "@assets/projects/calm/page4.jpg"
+import page5 from "@assets/projects/calm/page5.jpg"
 
 export const projects: ProjectCardType[] = [
   {
     projectImage: xcloneLanding,
-    heading: "X Clone",
-    description: "A Twitter-like social media platform clone featuring authentication, posting, liking, bookmarking, following, and a clean responsive UI.",
+    heading: "Social Media Platform",
+    description: "A Social Media Platform inspired by Twitter featuring authentication, posting, liking, bookmarking, following, and a clean responsive UI.",
     techStack: "React, TypeScript, Spring Boot, MySQL, Consul, JWT, Micro-services",
     githubUrl: "https://github.com/shawshank725/twitter-clone-spring-boot-react-microservices",
     otherImages: [
@@ -47,37 +39,12 @@ export const projects: ProjectCardType[] = [
     ]
   },
   {
-    projectImage: inventoryHome,
-    heading: "Inventory Management System",
-    description: "An inventory management web application to sell and buy products, and handle user authentication.",
-    techStack: "Spring Boot, Spring Security, Thymeleaf, Java, MySQL",
-    githubUrl: "https://github.com/shawshank725/inventory",
-    otherImages: [
-      inventoryLogin,
-      inventoryProfile,
-    ]
-  },
-  {
-    projectImage: textvoidHome,
-    heading: "TextVoid",
-    description: "A simple anonymous message board built with Spring Boot and Bootstrap, inspired by 4Chan (text-only). Users can view the latest posts, browse by genre, and search posts by message content — no login required.",
-    techStack: "Spring Boot, Thymeleaf, Java, Bootstrap, MySQL",
-    githubUrl: "https://github.com/shawshank725/textvoid",
-    otherImages: [
-      textvoidLatest,
-      textvoidNew,
-      textvoidPosts,
-    ]
-  },
-  {
-    projectImage: firstImage,
-    heading: "Number System Converter",
-    description: "Number System Converter is a Spring Boot web application that allows users to convert numbers between binary, decimal, and hexadecimal formats through a simple and interactive interface.",
-    techStack: "Spring Boot, Thymeleaf, Java, Bootstrap, MySQL",
-    githubUrl: "https://github.com/shawshank725/number-system-converter",
-    otherImages: [
-      secondImage,thirdImage,fourthImage
-    ]
+    projectImage: logo,
+    heading: "C.A.L.M App",
+    description: "This is an application made for the university to provide a relaxing environment for students. It allows students to book an appointment with an expert.",
+    techStack: "React Native, TypeScript, Expo Go, React Query, Supabase",
+    githubUrl: "https://github.com/shawshank725/calm-android-app-final",
+    otherImages: [page1, page2, page3, page4, page5]
   },
   {
     projectImage: gameMainMenu,

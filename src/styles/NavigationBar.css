@@ -17,9 +17,18 @@
     -webkit-backdrop-filter: blur(10px);
 }
 
+
+@media screen and (max-width: 650px) {
+  .navigationBarContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+}
+
 .myName {
   font-family: "BeyondWonderland";
-  font-size: 3vw;
+  font-size: 30px;
 }
 
 @font-face {
