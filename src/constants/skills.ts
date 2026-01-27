@@ -11,12 +11,14 @@ import godot from '@assets/skills/godot.svg';
 import expoGo from '@assets/skills/expo.svg';
 import supabase from '@assets/skills/supabase.png';
 import reactNative from '@assets/skills/reactnative.png';
+import graalvm from '@assets/skills/graalvm.png';
 
 export const skills = [
   { skillName: "Java", imageUrl: java },
   { skillName: "Spring Boot", imageUrl: springBoot },
   { skillName: "MySQL", imageUrl: mysql },
   { skillName: "Docker", imageUrl: docker },
+  { skillName: "GraalVM", imageUrl: graalvm },
   { skillName: "React", imageUrl: reactLogo },
   { skillName: "React Native", imageUrl: reactNative },
   { skillName: "TypeScript", imageUrl: typescript },

@@ -14,6 +14,12 @@ import gameMainMenu from "@assets/projects/game/mainmenu.png";
 import gameLevel from "@assets/projects/game/level.png";
 import gameLights from "@assets/projects/game/lights.png";
 
+// --- Ordo images ---
+import ordo from "@assets/projects/ordo/ordo.png";
+import ordoDelete from "@assets/projects/ordo/ordo delete.png";
+import ordoRename from "@assets/projects/ordo/ordo rename.png";
+import ordoOpen from "@assets/projects/ordo/ordo open.png";
+
 // --- CALM App images ---
 import logo from "@assets/projects/calm/logo.png"
 import page1 from "@assets/projects/calm/page1.jpg"
@@ -37,6 +43,15 @@ export const projects: ProjectCardType[] = [
       xcloneProfilePage,
       xcloneRegister,
     ]
+  },
+  {
+    projectImage: ordo,
+    heading: "Ordo: File management CLI tool",
+    description: "A file management tool made using PicoCLI, Java and converted into native binary using GraalVM to enable user to batch rename, delete, move or copy files. It is also published on Maven Central.",
+    techStack: "Java, PicoCLI, GraalVM",
+    githubUrl: "https://github.com/shawshank725/ordo",
+    liveDemoUrl: "https://github.com/shawshank725/ordo/releases/tag/1.1.0",
+    otherImages: [ ordoDelete, ordoOpen, ordoRename]
   },
   {
     projectImage: logo,
