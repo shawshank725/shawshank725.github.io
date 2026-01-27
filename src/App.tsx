@@ -6,7 +6,6 @@ import SkillsPage from "@components/SkillsPage";
 
 import "./styles/App.css";
 
-console.log("SkillsPage:", SkillsPage);
 function App() {
   const homePageRef = useRef<HTMLDivElement | null>(null);
   const skillsPageRef = useRef<HTMLDivElement | null>(null);
