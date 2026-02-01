@@ -21,7 +21,7 @@ export default function HomePage({reference}: ReferenceProp) {
                 </div>
                 <div className='aboutMeFocusContainer'>
                     <span className='introductionText'>
-                        A cracked Full stack Java Developer obsessed with
+                        I'm a Full stack Java Developer obsessed with
                         building backend systems using Spring Boot. 
                         I have published my own Java package (CLI tool) to Maven Central.
                         My interests include ethical hacking and game development as well.
