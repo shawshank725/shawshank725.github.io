@@ -1,5 +1,5 @@
 .navigationBarContainer {
-    background-color: rgba(144, 173, 216, 0.664);
+background-color: rgba(144, 173, 216, 0.664);
     display: flex;
     width: 100%;
     height: fit-content;
@@ -26,10 +26,6 @@
   }
 }
 
-.myName {
-  font-family: "BeyondWonderland";
-  font-size: 30px;
-}
 
 @font-face {
   font-family: 'BeyondWonderland';
@@ -54,6 +50,7 @@
 .buttonContainer {
   display: flex;
   column-gap: 10px;
+  border-radius: 10px;
 }
 
 .profileLinkImage {
@@ -64,4 +61,10 @@
 }
 .profileLinkImage:hover {
   opacity: 0.6;
+}
+
+
+.myName {
+  font-family: "BeyondWonderland";
+  font-size: 30px;
 }

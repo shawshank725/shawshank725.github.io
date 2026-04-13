@@ -3,8 +3,8 @@ import HomePage from "@components/HomePage";
 import NavigationBar from "@components/NavigationBar";
 import ProjectsPage from "@components/ProjectsPage";
 import SkillsPage from "@components/SkillsPage";
-
-import "./styles/App.css";
+import "@/styles/App.css";
+import Toggler from "./components/Toggler";
 
 function App() {
   const homePageRef = useRef<HTMLDivElement | null>(null);
@@ -20,6 +20,7 @@ function App() {
       <SkillsPage reference={skillsPageRef} />
       <ProjectsPage reference={projectsPageRef} />
       <p className="copyright">© {date} Shashank Verma. All rights reserved.</p>
+      <Toggler/>
     </div>
   )
 }
