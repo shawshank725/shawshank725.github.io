@@ -16,12 +16,14 @@
 }
 
 body {
-  background-color: rgb(204, 215, 248);
+  background-color: #F8F9FA;
+  background-image:
+    radial-gradient(#E5E7EB 1px, transparent 1px);
+  background-size: 24px 24px;
   margin: 0;
   overflow-x: hidden;
   padding-top: 80px;
   padding-left: 20px;
   padding-right: 20px;
-  font-family: 'Inter', sans-serif;
+  font-family: "JetBrains Mono", monospace;
 }
-
