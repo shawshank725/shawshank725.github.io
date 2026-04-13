@@ -8,19 +8,21 @@ export default function ProjectsPage({reference}: ReferenceProp) {
     return (
         <div className="projectsPageContainer" ref={reference}>
             <Heading heading="My Projects"/>
-            {
+            <div className="projectsGrid">
+                {
                 projects.map((project)=>(
                     <ProjectCard projectCardType={{
-                        projectImage: project.projectImage,
+                        //projectImage: project.projectImage,
                         heading: project.heading,
                         description: project.description,
                         techStack: project.techStack,
                         githubUrl: project.githubUrl,
                         liveDemoUrl: project.liveDemoUrl,
-                        otherImages: project.otherImages
+                        // otherImages: project.otherImages
                     }} />
                 ))
             }
+            </div>
         </div>
     )
 }

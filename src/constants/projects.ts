@@ -30,47 +30,37 @@ import page5 from "@assets/projects/calm/page5.jpg"
 
 export const projects: ProjectCardType[] = [
   {
-    projectImage: xcloneLanding,
-    heading: "Social Media Platform",
-    description: "A Social Media Platform inspired by Twitter featuring authentication, posting, liking, bookmarking, following, and a clean responsive UI.",
+    //projectImage: xcloneLanding,
+    heading: "Twitter clone",
+    description: "Social Media Platform inspired by Twitter",
     techStack: "React, TypeScript, Spring Boot, MySQL, Consul, JWT, Micro-services",
     githubUrl: "https://github.com/shawshank725/twitter-clone-spring-boot-react-microservices",
-    otherImages: [
-      xcloneLogin,
-      xclonePostModal,
-      xclonePostModalNoReply,
-      xclonePostViewer,
-      xcloneProfilePage,
-      xcloneRegister,
-    ]
+    // otherImages: [ xcloneLogin,   xclonePostModal,xclonePostModalNoReply,xclonePostViewer,xcloneProfilePage, xcloneRegister,   ]
   },
   {
-    projectImage: ordo,
-    heading: "Ordo: File management CLI tool",
-    description: "A file management tool made using PicoCLI, Java and converted into native binary using GraalVM to enable user to batch rename, delete, move or copy files. It is also published on Maven Central.",
+    //projectImage: ordo,
+    heading: "Ordo",
+    description: "File management tool",
     techStack: "Java, PicoCLI, GraalVM",
     githubUrl: "https://github.com/shawshank725/ordo",
     liveDemoUrl: "https://github.com/shawshank725/ordo/releases/tag/1.1.0",
-    otherImages: [ ordoDelete, ordoOpen, ordoRename]
+    // otherImages: [ ordoDelete, ordoOpen, ordoRename]
   },
   {
-    projectImage: logo,
+    //projectImage: logo,
     heading: "C.A.L.M App",
-    description: "This is an application made for the university to provide a relaxing environment for students. It allows students to book an appointment with an expert.",
+    description: "Mental Well-being",
     techStack: "React Native, TypeScript, Expo Go, React Query, Supabase",
     githubUrl: "https://github.com/shawshank725/calm-android-app-final",
-    otherImages: [page1, page2, page3, page4, page5]
+    // otherImages: [page1, page2, page3, page4, page5]
   },
   {
-    projectImage: gameMainMenu,
-    heading: "2D Platformer Game",
-    description: "A 2D platformer game with multiple levels, lighting effects, and a main menu. Built using Godot and GDScript.",
+    //projectImage: gameMainMenu,
+    heading: "Forsaken Labyrinth",
+    description: "2D platformer game",
     techStack: "GDScript, Godot",
     githubUrl: "https://github.com/shawshank725/forsakenLabyrinth",
     liveDemoUrl: "https://shawshank725.github.io/forsakenLabyrinth/",
-    otherImages: [
-      gameLevel,
-      gameLights,
-    ]
+    // otherImages: [      gameLevel,      gameLights,    ]
   }
 ];

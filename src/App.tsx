@@ -20,7 +20,7 @@ function App() {
       <SkillsPage reference={skillsPageRef} />
       <ProjectsPage reference={projectsPageRef} />
       <p className="copyright">© {date} Shashank Verma. All rights reserved.</p>
-      <Toggler/>
+      {/* <Toggler/> */}
     </div>
   )
 }

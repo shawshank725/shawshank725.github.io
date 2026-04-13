@@ -11,7 +11,7 @@ export function SkillBadge() {
     <div>
       {Object.entries(skills_group).map(([groupName, groupSkills]) => (
         <div key={groupName}>
-          <p>{groupName}</p>
+          <p className='skillsBadgeGroupName'>{groupName}</p>
 
           <div className="skillsGroupContainer">
             {groupSkills.map((skills_group) => (

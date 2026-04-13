@@ -1,16 +1,15 @@
-import { useState } from 'react';
 import '@styles/ProjectCard.css';
-import PhotoViewer from '@components/PhotoViewer';
-import useOutsideAlerter from '@hooks/useOutsideAlerter';
+import githubIcon from "@assets/github/github-mark.png";
+import { Play } from 'lucide-react';
 
-export type ProjectCardType= {
-    projectImage:string;
-    heading:string;
-    description:string;
-    techStack:string;
-    githubUrl:string;
-    liveDemoUrl?:string;
-    otherImages:string[];
+export type ProjectCardType = {
+    //projectImage:string;
+    heading: string;
+    description: string;
+    techStack: string;
+    githubUrl: string;
+    liveDemoUrl?: string;
+    //otherImages:string[];
 }
 
 export type ProjectCardProp = {
@@ -18,25 +17,50 @@ export type ProjectCardProp = {
 }
 
 
-export default function ProjectCard({projectCardType}: ProjectCardProp) {
+export default function ProjectCard({ projectCardType }: ProjectCardProp) {
 
-    const [showPhotoViewer, setShowPhotoViewer] = useState<boolean>(false);
-    const [selectedPhoto, setSelectedPhoto] = useState<string>("");
-    const {ref: photoViewerRef} = useOutsideAlerter<HTMLDivElement>(undefined, setSelectedPhoto);
+    // const [showPhotoViewer, setShowPhotoViewer] = useState<boolean>(false);
+    // const [selectedPhoto, setSelectedPhoto] = useState<string>("");
+    // const {ref: photoViewerRef} = useOutsideAlerter<HTMLDivElement>(undefined, setSelectedPhoto);
 
     return (
         <div className='projectCardContainer'>
-            <div className='projectImageContainer'>
-                <img src={projectCardType.projectImage} className='projectImage' onClick={()=> {setSelectedPhoto(projectCardType.projectImage)}}/>
-            </div>
+            {/* <div className='projectImageContainer'>
+                <img src={projectCardType.projectImage} className='projectImage' 
+                // onClick={()=> {setSelectedPhoto(projectCardType.projectImage)}}
+                /> 
+            </div> */}
             <div className="projectDescriptionContainer">
                 <span className='projectHeading'>{projectCardType.heading}</span>
                 <span className='projectDescription'>{projectCardType.description}</span>
                 <div>
-                    <span style={{fontWeight:"bold"}}>Tech stack used: </span>
+                    <span style={{ fontWeight: "bold" }}>Tech stack used: </span>
                     <span className='projectTechStack'>{projectCardType.techStack}</span>
                 </div>
-                <a href={projectCardType.githubUrl}
+
+                <div className="projectButtons">
+
+                    <a
+                        href={projectCardType.githubUrl}
+                        className={`projectBtn ${!projectCardType.githubUrl ? 'disabled' : ''}`}
+                        target="_blank"
+                    >
+                        <img src={githubIcon} className="projectBtnIcon" />
+                        <span>Code</span>
+                    </a>
+
+                    <a
+                        href={projectCardType.liveDemoUrl}
+                        className={`projectBtn ${!projectCardType.liveDemoUrl ? 'disabled' : ''}`}
+                        target="_blank"
+                    >
+                        <Play className="projectBtnIcon" />
+                        <span>Live</span>
+                    </a>
+
+                </div>
+
+                {/* <a href={projectCardType.githubUrl}
                  className='projectGithubUrl'
                  target='_blank'
                  >
@@ -48,8 +72,8 @@ export default function ProjectCard({projectCardType}: ProjectCardProp) {
                             Click here to try out the project
                         </a>
                     )
-                }
-                <div className='allOtherImagesContainer'>
+                } */}
+                {/* <div className='allOtherImagesContainer'>
                     {
                         projectCardType.otherImages.map((otherImage)=> (
                             <div className='otherImageContainer'>
@@ -57,9 +81,9 @@ export default function ProjectCard({projectCardType}: ProjectCardProp) {
                             </div>
                         ))
                     }
-                </div>
+                </div> */}
             </div>
-            {
+            {/* {
                 selectedPhoto != "" && selectedPhoto !=null && (
                     <PhotoViewer 
                         selectedPhoto={selectedPhoto}
@@ -69,7 +93,7 @@ export default function ProjectCard({projectCardType}: ProjectCardProp) {
                         refer={photoViewerRef}
                     />
                 )
-            }
+            } */}
         </div>
     )
 }
