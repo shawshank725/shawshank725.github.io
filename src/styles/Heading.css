@@ -2,4 +2,15 @@
     font-size: 30px;
     font-weight: bold;
     margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #1E40AF;
+    padding-bottom: 4px;
+    border-bottom: solid 3px #1E40AF;
+}
+
+.headingContainer {
+    display: flex;
+    text-align: left;
+    width: 100%;
 }

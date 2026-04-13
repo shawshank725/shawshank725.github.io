@@ -1,12 +1,20 @@
 .skillsPageContainer {
     display: flex;
-    background-color: #e5e5f0;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
+    background-color: #FFFFFF;
+    width: 50%;
     border-radius: 10px;
     box-sizing: border-box;
+    align-self: center;
+    /* border: 1px solid #E5E7EB; */
+    transition: all 0.3s ease;
+    padding-left: 10px;
+    flex-direction: column;
 }
+
+/* .skillsPageContainer:hover {
+    border-color: #3B82F6;
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.1);
+} */
 
 .skillsGrid {    
     display: grid;
@@ -15,7 +23,7 @@
     padding: 20px;
     box-sizing: border-box;
 }
-
+/* 
 @media screen and (max-width:900px){
     .skillsGrid {
         grid-template-columns: repeat(3, 1fr); 
@@ -26,7 +34,16 @@
     .skillsGrid {
         grid-template-columns: repeat(2, 1fr); 
     }
+} */
+
+
+@media screen and (max-width: 1000px) {
+    
+    .skillsPageContainer {
+        width: 80%;
+    }
 }
+
 
 .skillCardContainer {
     display: flex;
@@ -59,4 +76,46 @@
 .skillCardImage {
     width: 100%;
     object-fit: cover;
+}
+
+
+
+
+
+
+/* Skills Badge Code Here*/
+.skillsGroupContainer {
+    display: flex;
+    flex-wrap: wrap;        /* allows wrapping */
+    gap: 10px;              /* spacing between badges */
+}
+
+/* existing */
+.skillsBadgeDiv {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px dashed grey;
+    width: max-content;
+    padding: 5px 10px;
+    border-radius: 30px;
+    transition: all 0.2s ease;   /* smooth animation */
+    cursor: default;
+}
+
+/* hover effect */
+.skillsBadgeDiv:hover {
+    border-color: #3b82f6;
+    background-color: rgba(59, 130, 246, 0.1);
+    transform: translateY(-2px);
+}
+
+/* icon */
+.skillsBadgeIcon {
+    width: 15px;
+}
+
+/* text */
+.skillsBadgeDiv p {
+    margin: 0;
 }

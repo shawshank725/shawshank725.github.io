@@ -5,8 +5,10 @@ type HeadingProp = {
 }
 export default function Heading({heading}: HeadingProp) {
     return (
-        <div className="heading">
+        <div className='headingContainer'>
+            <h2 className="heading">
             {heading}
+        </h2>
         </div>
     )
 }
