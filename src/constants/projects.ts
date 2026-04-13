@@ -1,32 +1,5 @@
 import type { ProjectCardType } from "../components/ProjectCard";
 
-// --- X Clone images ---
-import xcloneLanding from "@assets/projects/xclone/landing.png";
-import xcloneLogin from "@assets/projects/xclone/login.png";
-import xclonePostModal from "@assets/projects/xclone/postmodal.png";
-import xclonePostModalNoReply from "@assets/projects/xclone/postmodalnoreply.png";
-import xclonePostViewer from "@assets/projects/xclone/postviewer.png";
-import xcloneProfilePage from "@assets/projects/xclone/profilepage.png";
-import xcloneRegister from "@assets/projects/xclone/register.png";
-
-// --- Game images ---
-import gameMainMenu from "@assets/projects/game/mainmenu.png";
-import gameLevel from "@assets/projects/game/level.png";
-import gameLights from "@assets/projects/game/lights.png";
-
-// --- Ordo images ---
-import ordo from "@assets/projects/ordo/ordo.png";
-import ordoDelete from "@assets/projects/ordo/ordo delete.png";
-import ordoRename from "@assets/projects/ordo/ordo rename.png";
-import ordoOpen from "@assets/projects/ordo/ordo open.png";
-
-// --- CALM App images ---
-import logo from "@assets/projects/calm/logo.png"
-import page1 from "@assets/projects/calm/page1.jpg"
-import page2 from "@assets/projects/calm/page2.jpg"
-import page3 from "@assets/projects/calm/page3.jpg"
-import page4 from "@assets/projects/calm/page4.jpg"
-import page5 from "@assets/projects/calm/page5.jpg"
 
 export const projects: ProjectCardType[] = [
   {
