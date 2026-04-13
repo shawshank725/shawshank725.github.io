@@ -1,6 +1,5 @@
-import  { useState } from 'react';
-import { skills } from '@constants/skills';
-import useOutsideAlerter from '@hooks/useOutsideAlerter';
+// import  { useState } from 'react';
+// import useOutsideAlerter from '@hooks/useOutsideAlerter';
 import '@styles/SkillsPage.css';
 import Heading from './Heading';
 import type { ReferenceProp } from '@/types/ReferenceProp';
@@ -29,9 +28,9 @@ export function SkillBadge() {
 
 export default function SkillsPage({reference}: ReferenceProp) {
 
-    const [showPhotoViewer, setShowPhotoViewer] = useState<boolean>(false);
-    const [selectedPhoto, setSelectedPhoto] = useState<string>("");
-    const {ref: photoViewerRef} = useOutsideAlerter<HTMLDivElement>(undefined, setSelectedPhoto);
+    // const [showPhotoViewer, setShowPhotoViewer] = useState<boolean>(false);
+    // const [selectedPhoto, setSelectedPhoto] = useState<string>("");
+    // const {ref: photoViewerRef} = useOutsideAlerter<HTMLDivElement>(undefined, setSelectedPhoto);
 
     return (
         <div className='skillsPageContainer' ref={reference}>

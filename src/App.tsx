@@ -4,7 +4,6 @@ import NavigationBar from "@components/NavigationBar";
 import ProjectsPage from "@components/ProjectsPage";
 import SkillsPage from "@components/SkillsPage";
 import "@/styles/App.css";
-import Toggler from "./components/Toggler";
 
 function App() {
   const homePageRef = useRef<HTMLDivElement | null>(null);
