@@ -28,14 +28,14 @@ export default function HomePage({ reference }: ReferenceProp) {
                         <span className='introductionText'>My interests include ethical hacking and game development as well.</span>
                     </div>
 
-                    <div className='focusContainer'>
+                    {/* <div className='focusContainer'>
                         <div className='focusNamePercentage'>
                             Frontend (30%)
                         </div>
                         <div className='focusNamePercentage'>
                             Backend (70%)
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

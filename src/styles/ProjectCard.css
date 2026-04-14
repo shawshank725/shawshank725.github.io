@@ -11,7 +11,8 @@
     border: solid 1px grey;
     transition: transform 0.2s ease, border 0.2s ease;
     align-self: start;
-    height: 200px;
+    min-height: 200px;
+    max-height: 230px;
 }
 
 .projectCardContainer:hover {

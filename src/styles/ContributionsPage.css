@@ -1,0 +1,44 @@
+.contributionsPageContainer {
+    display: flex;
+    background-color: #FFFFFF;
+    width: 50%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    align-self: center;
+    border: 1px solid #E5E7EB;
+    transition: all 0.3s ease;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.contributionsPageContainer:hover {
+    border-color: #3B82F6;
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.1);
+}
+
+
+/* The contribution detail card styles here */
+.contributionsList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contributionCard {
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.contributionCard a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.contributionCard a:hover {
+    text-decoration: underline;
+}
+
+.contributionCard p {
+    margin: 1px;
+}
