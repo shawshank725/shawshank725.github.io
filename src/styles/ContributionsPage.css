@@ -16,6 +16,12 @@
     box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.1);
 }
 
+@media screen and (max-width: 1000px) {
+
+    .contributionsPageContainer {
+        width: 100%;
+    }
+}
 
 /* The contribution detail card styles here */
 .contributionsList {
