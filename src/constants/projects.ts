@@ -25,6 +25,7 @@ export const projects: ProjectCardType[] = [
     description: "Mental Well-being",
     techStack: "React Native, TypeScript, Expo Go, React Query, Supabase",
     githubUrl: "https://github.com/shawshank725/calm-android-app-final",
+    liveDemoUrl: "https://play.google.com/store/apps/details?id=com.calmspace.helpdeskapp&pcampaignid=web_share"
     // otherImages: [page1, page2, page3, page4, page5]
   },
   {
