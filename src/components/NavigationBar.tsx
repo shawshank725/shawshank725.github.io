@@ -37,7 +37,7 @@ export default function NavigationBar({homePageRef, skillsPageRef, projectsPageR
                 
                 
 
-                <a className='profileLink' href='/assets/resume/resume.pdf' download={"Resume.pdf"} >
+                <a className='profileLink' href='/resume/resume.pdf' download={"Resume.pdf"} >
                     <button className='navigationItem'>Resume</button>
                 </a>
                 {/* <a className='profileLink' href='https://github.com/shawshank725' target='_blank'>
