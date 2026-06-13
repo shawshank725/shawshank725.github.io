@@ -1,4 +1,4 @@
-import type { ProjectCardType } from "../components/ProjectCard";
+import type { ProjectCardType } from "@/components/ProjectCard";
 
 
 export const projects: ProjectCardType[] = [
@@ -6,8 +6,9 @@ export const projects: ProjectCardType[] = [
     //projectImage: xcloneLanding,
     heading: "Twitter clone",
     description: "Social Media Platform inspired by Twitter",
-    techStack: "React, TypeScript, Spring Boot, MySQL, Consul, JWT, Micro-services",
-    githubUrl: "https://github.com/shawshank725/twitter-clone-spring-boot-react-microservices",
+    techStack: "React, TypeScript, Spring Boot, MySQL, ",
+    githubUrl: "https://github.com/shawshank725/twitter",
+    liveDemoUrl: "https://twitter-modulith.netlify.app"
     // otherImages: [ xcloneLogin,   xclonePostModal,xclonePostModalNoReply,xclonePostViewer,xcloneProfilePage, xcloneRegister,   ]
   },
   {
