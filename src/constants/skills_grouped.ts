@@ -26,6 +26,7 @@ import springBoot from '@assets/skills/Spring_Boot.svg.png';
 import supabase from '@assets/skills/supabase.png';
 import typescript from '@assets/skills/typescript.png';
 import vscode from '@assets/skills/vscode.png';
+import ollama from "@/assets/skills/Ollama.png";
 
 export const skills_group = {
   "Frontend": [
@@ -71,6 +72,7 @@ export const skills_group = {
     { skillName: "IntelliJ", imageUrl: intellij },
     { skillName: "VS Code", imageUrl: vscode },
     { skillName: "Android Studio", imageUrl: androidStudio },
+    { skillName: "Ollama", imageUrl: ollama },
   ],
 
   "Game Dev": [
