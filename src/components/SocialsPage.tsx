@@ -10,11 +10,15 @@ export default function SocialsPage({ reference }: ReferenceProp) {
       <Heading heading="Connect with Me" />
 
       <div className="socialsContainer">
-        
+
         <a
           href="https://github.com/shawshank725"
           target="_blank"
           className="socialCard"
+          rel="noopener noreferrer"
+          onClick={() => {
+            window.gtag?.("event", "github_click");
+          }}
         >
           <img src={githubIcon} className="socialIcon" />
           <p>GitHub</p>
@@ -24,6 +28,10 @@ export default function SocialsPage({ reference }: ReferenceProp) {
           href="https://linkedin.com/in/shashankv725"
           target="_blank"
           className="socialCard"
+          rel="noopener noreferrer"
+          onClick={() => {
+            window.gtag?.("event", "linkedin_click");
+          }}
         >
           <img src={linkedinIcon} className="socialIcon" />
           <p>LinkedIn</p>

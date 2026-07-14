@@ -8,44 +8,55 @@ type NavigationProps = {
     socialsPageRef: React.RefObject<HTMLDivElement | null>;
 }
 
-export default function NavigationBar({homePageRef, skillsPageRef, projectsPageRef, contributionsPageRef, socialsPageRef}: NavigationProps) {
+export default function NavigationBar({ homePageRef, skillsPageRef, projectsPageRef, contributionsPageRef, socialsPageRef }: NavigationProps) {
     return (
         <div className='navigationBarContainer'>
-            <div className='myName' onClick={() => {homePageRef.current?.scrollIntoView({
-                    behavior:'smooth'
-                })}}>
+            <div className='myName' onClick={() => {
+                homePageRef.current?.scrollIntoView({
+                    behavior: 'smooth'
+                })
+            }}>
                 Shashank Verma
             </div>
             <div className='buttonContainer'>
-                <button className='navigationItem' onClick={() => {skillsPageRef.current?.scrollIntoView({
-                    behavior:'smooth'
-                })}}>Skills</button>
+                <button className='navigationItem' onClick={() => {
+                    skillsPageRef.current?.scrollIntoView({
+                        behavior: 'smooth'
+                    })
+                }}>Skills</button>
 
-                <button className='navigationItem' onClick={() => {projectsPageRef.current?.scrollIntoView({
-                    behavior:'smooth'
-                })}}>Projects</button>
+                <button className='navigationItem' onClick={() => {
+                    projectsPageRef.current?.scrollIntoView({
+                        behavior: 'smooth'
+                    })
+                }}>Projects</button>
 
-                
-                <button className='navigationItem' onClick={() => {contributionsPageRef.current?.scrollIntoView({
-                    behavior:'smooth'
-                })}}>Contributions</button>
-                
-                <button className='navigationItem' onClick={() => {socialsPageRef.current?.scrollIntoView({
-                    behavior:'smooth'
-                })}}>Social</button>
 
-                
-                
+                <button className='navigationItem' onClick={() => {
+                    contributionsPageRef.current?.scrollIntoView({
+                        behavior: 'smooth'
+                    })
+                }}>Contributions</button>
 
-                <a className='profileLink' href='/resume/Shashank_Verma_CV.pdf' download={"Shashank_Verma_Resume.pdf"} >
+                <button className='navigationItem' onClick={() => {
+                    socialsPageRef.current?.scrollIntoView({
+                        behavior: 'smooth'
+                    })
+                }}>Social</button>
+
+
+
+
+                <a className='profileLink'
+                    href='/resume/Shashank_Verma_CV.pdf'
+                    download={"Shashank_Verma_Resume.pdf"}
+                    onClick={() => {
+                        window.gtag?.("event", "resume_download");
+                    }}
+
+                >
                     <button className='navigationItem'>Resume</button>
                 </a>
-                {/* <a className='profileLink' href='https://github.com/shawshank725' target='_blank'>
-                    <img src={githubIcon} className='profileLinkImage'/>
-                </a>
-                <a className='profileLink'href='https://www.linkedin.com/in/shashankv725/' target='_blank'>
-                    <img src={linkedIcon} className='profileLinkImage'/>
-                </a> */}
             </div>
         </div>
     )
