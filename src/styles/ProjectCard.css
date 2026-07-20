@@ -8,7 +8,7 @@
     overflow: hidden;
     column-gap: 20px;
     box-sizing: border-box;
-    border: solid 1px grey;
+    border: solid 1px rgb(224, 215, 215);
     transition: transform 0.2s ease, border 0.2s ease;
     align-self: start;
     min-height: 200px;
