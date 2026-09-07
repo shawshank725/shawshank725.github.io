@@ -4,8 +4,9 @@ import NavigationBar from "@components/NavigationBar";
 import ProjectsPage from "@components/ProjectsPage";
 import SkillsPage from "@components/SkillsPage";
 import "@/styles/App.css";
-import ContributionsPage from "./components/Contributions";
-import SocialsPage from "./components/SocialsPage";
+import ContributionsPage from "@/components/Contributions";
+import SocialsPage from "@/components/SocialsPage";
+import AchievementsPage from "@/components/Achievements";
 
 function App() {
   const homePageRef = useRef<HTMLDivElement | null>(null);
@@ -13,6 +14,7 @@ function App() {
   const projectsPageRef = useRef<HTMLDivElement | null>(null);
   const contributionsPageRef = useRef<HTMLDivElement | null>(null);
   const socialsPageRef = useRef<HTMLDivElement | null>(null);
+  const achievementsPageRef = useRef<HTMLDivElement | null>(null);
 
   const date = new Date().getFullYear();
 
@@ -28,6 +30,7 @@ function App() {
       <HomePage reference={homePageRef}/>
       <SkillsPage reference={skillsPageRef} />
       <ProjectsPage reference={projectsPageRef} />
+      <AchievementsPage reference={achievementsPageRef} />
       <ContributionsPage reference={contributionsPageRef} />
       <SocialsPage reference={socialsPageRef} />
       

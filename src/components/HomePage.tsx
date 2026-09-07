@@ -21,11 +21,12 @@ export default function HomePage({ reference }: ReferenceProp) {
                 </div>
                 <div className='aboutMeFocusContainer'>
                     <div className='introductionTextContainer'>
-                        <span className='introductionText'>Hi! I'm Shashank.</span>
-                        <span className='introductionText'>I'm a Full stack Java Developer with expertise in building backend systems using Spring Boot.</span>
-                        <span className='introductionText'>I use Linux BTW. Currently I'm on Linux Mint.</span>
-                        <span className='introductionText'>I have published my own Java package (CLI tool) to Maven Central.</span>
-                        <span className='introductionText'>My interests include ethical hacking and game development as well.</span>
+                        <span className='introductionText'>Hi! I'm Shashank. I'm a <strong>Full stack Java Developer</strong> with expertise in building backend systems using <strong>Spring Boot</strong>.</span>
+                        <span className='introductionText'>I have made <strong>open source contributions</strong>, 
+                            participated in hackathons, and developed and published mobile app to 
+                            <strong> Google Play Store</strong> as well.</span>
+                        <span className='introductionText'>I know how to use various Linux distros (like <strong>Mint</strong> and <strong>RedHat</strong>). 
+                        And my interests include <strong>ethical hacking</strong> and <strong>game development</strong>.</span>
                     </div>
 
                     {/* <div className='focusContainer'>

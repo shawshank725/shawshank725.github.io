@@ -28,6 +28,12 @@ import typescript from '@assets/skills/typescript.png';
 import vscode from '@assets/skills/vscode.png';
 import ollama from "@/assets/skills/Ollama.png";
 
+import linuxMint from "@/assets/skills/linuxminy.png";
+import redhat from "@/assets/skills/redhat.webp";
+import kali from "@/assets/skills/kali.webp";
+import windows from "@/assets/skills/windows.webp";
+
+
 export const skills_group = {
   "Frontend": [
     { skillName: "React", imageUrl: react },
@@ -73,6 +79,12 @@ export const skills_group = {
     { skillName: "VS Code", imageUrl: vscode },
     { skillName: "Android Studio", imageUrl: androidStudio },
     { skillName: "Ollama", imageUrl: ollama },
+  ],
+  "Operating Systems": [
+    { skillName: "Linux Mint",imageUrl: linuxMint},
+    { skillName: "Red Hat Enterprise Linux", imageUrl: redhat},
+    {skillName: "Kali Linux", imageUrl: kali},
+    { skillName: "Windows", imageUrl: windows}
   ],
 
   "Game Dev": [
