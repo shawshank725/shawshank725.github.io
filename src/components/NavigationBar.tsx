@@ -13,7 +13,7 @@ setPdfPath: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export default function NavigationBar({ homePageRef, skillsPageRef, 
-    projectsPageRef, contributionsPageRef, socialsPageRef,
+    projectsPageRef, socialsPageRef,
     experiencePageRef,
         setShowPDFViewer,
     setPdfPath
