@@ -7,7 +7,7 @@ import ProjectCard from '@components/ProjectCard';
 export default function ProjectsPage({reference}: ReferenceProp) {
     return (
         <div className="projectsPageContainer" ref={reference}>
-            <Heading heading="My Projects"/>
+            <Heading heading="Projects"/>
             <div className="projectsGrid">
                 {
                 projects.map((project)=>(

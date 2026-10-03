@@ -34,7 +34,7 @@ export default function SkillsPage({ reference }: ReferenceProp) {
 
     return (
         <div className='skillsPageContainer' ref={reference}>
-            <Heading heading="My Skills" />
+            <Heading heading="Skills" />
             {/* <div className='skillsGrid'>
                 {
                     skills.map((skill)=> (

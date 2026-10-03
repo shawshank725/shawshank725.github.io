@@ -42,14 +42,14 @@ export const skills_group = {
     { skillName: "JavaScript", imageUrl: js },
     { skillName: "HTML", imageUrl: htmlWebp },
     { skillName: "CSS", imageUrl: css },
-    { skillName: "Expo", imageUrl: expo },
+    // { skillName: "Expo", imageUrl: expo },
   ],
 
   "Backend": [
     { skillName: "Spring Boot", imageUrl: springBoot },
-    { skillName: "Apache Tomcat", imageUrl: apacheTomcat },
-    { skillName: "GraalVM", imageUrl: graalvm },
-    { skillName: "Picocli", imageUrl: picocli },
+    // { skillName: "Apache Tomcat", imageUrl: apacheTomcat },
+    // { skillName: "GraalVM", imageUrl: graalvm },
+    // { skillName: "Picocli", imageUrl: picocli },
   ],
 
   "Languages": [
@@ -68,17 +68,17 @@ export const skills_group = {
   "DevOps": [
     { skillName: "Docker", imageUrl: docker },
     { skillName: "Maven", imageUrl: maven },
-    { skillName: "Gradle", imageUrl: gradle },
+    // { skillName: "Gradle", imageUrl: gradle },
   ],
 
   "Tools": [
     { skillName: "Git", imageUrl: git },
     { skillName: "Postman", imageUrl: postman },
-    { skillName: "Selenium", imageUrl: selenium },
+    // { skillName: "Selenium", imageUrl: selenium },
     { skillName: "IntelliJ", imageUrl: intellij },
     { skillName: "VS Code", imageUrl: vscode },
     { skillName: "Android Studio", imageUrl: androidStudio },
-    { skillName: "Ollama", imageUrl: ollama },
+    // { skillName: "Ollama", imageUrl: ollama },
   ],
   "Operating Systems": [
     { skillName: "Linux Mint",imageUrl: linuxMint},

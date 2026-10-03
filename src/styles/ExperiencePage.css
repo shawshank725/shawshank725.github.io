@@ -1,0 +1,92 @@
+.experiencePageContainer {
+    display: flex;
+    background-color: #FFFFFF;
+    width: 50%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    align-self: center;
+    border: 1px solid #E5E7EB;
+    transition: all 0.3s ease;
+    flex-direction: column;
+    padding: 10px;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    .experiencePageContainer {
+        width: 100%;
+    }
+}
+
+
+.experiencePageContainer:hover {
+    border-color: #3B82F6;
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.1);
+}
+.experienceCard {
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.experienceName {
+    margin: 0px;
+    font-weight: bold;
+}
+
+.experienceDescription {
+    margin: 0px;
+}
+
+.experienceList  {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.companyDetailsAndCertificateContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.companyDetailsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.certificateContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+    
+}
+
+.completionCertificateButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    border: 1px solid #3B82F6;
+    border-radius: 6px;
+    background-color: rgb(40, 109, 173);
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.completionCertificateButton:hover {
+    transform: translateY(-3px);
+    background-color: rgba(40, 109, 173, 0.836);
+    border-color: #2563EB;
+}
+
+.unorderedListForExperience {
+    margin-bottom: 0px;
+}

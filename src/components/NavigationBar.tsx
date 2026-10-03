@@ -6,9 +6,18 @@ type NavigationProps = {
     projectsPageRef: React.RefObject<HTMLDivElement | null>;
     contributionsPageRef: React.RefObject<HTMLDivElement | null>;
     socialsPageRef: React.RefObject<HTMLDivElement | null>;
+    experiencePageRef: React.RefObject<HTMLDivElement | null>;
+
+    setShowPDFViewer: React.Dispatch<React.SetStateAction<boolean>>;
+setPdfPath: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export default function NavigationBar({ homePageRef, skillsPageRef, projectsPageRef, contributionsPageRef, socialsPageRef }: NavigationProps) {
+export default function NavigationBar({ homePageRef, skillsPageRef, 
+    projectsPageRef, contributionsPageRef, socialsPageRef,
+    experiencePageRef,
+        setShowPDFViewer,
+    setPdfPath
+ }: NavigationProps) {
     return (
         <div className='navigationBarContainer'>
             <div className='myName' onClick={() => {
@@ -33,10 +42,10 @@ export default function NavigationBar({ homePageRef, skillsPageRef, projectsPage
 
 
                 <button className='navigationItem' onClick={() => {
-                    contributionsPageRef.current?.scrollIntoView({
+                    experiencePageRef.current?.scrollIntoView({
                         behavior: 'smooth'
                     })
-                }}>Contributions</button>
+                }}>Experience</button>
 
                 <button className='navigationItem' onClick={() => {
                     socialsPageRef.current?.scrollIntoView({
@@ -47,16 +56,15 @@ export default function NavigationBar({ homePageRef, skillsPageRef, projectsPage
 
 
 
-                <a className='profileLink'
-                    href='/resume/Shashank_Verma_CV.pdf'
-                    download={"Shashank_Verma_Resume.pdf"}
-                    onClick={() => {
-                        window.gtag?.("event", "resume_download");
-                    }}
-
-                >
-                    <button className='navigationItem'>Resume</button>
-                </a>
+                <button
+    className='navigationItem'
+    onClick={() => {
+        setPdfPath("/resume/Shashank_Verma_CV.pdf");
+        setShowPDFViewer(true);
+    }}
+>
+    Resume
+</button>
             </div>
         </div>
     )

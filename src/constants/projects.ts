@@ -11,15 +11,15 @@ export const projects: ProjectCardType[] = [
     liveDemoUrl: "https://twitter-modulith.netlify.app"
     // otherImages: [ xcloneLogin,   xclonePostModal,xclonePostModalNoReply,xclonePostViewer,xcloneProfilePage, xcloneRegister,   ]
   },
-  {
-    //projectImage: ordo,
-    heading: "Ordo",
-    description: "File management tool",
-    techStack: "Java, PicoCLI, GraalVM",
-    githubUrl: "https://github.com/shawshank725/ordo",
-    liveDemoUrl: "https://github.com/shawshank725/ordo/releases/tag/1.1.0",
-    // otherImages: [ ordoDelete, ordoOpen, ordoRename]
-  },
+  // {
+  //   //projectImage: ordo,
+  //   heading: "Ordo",
+  //   description: "File management tool",
+  //   techStack: "Java, PicoCLI, GraalVM",
+  //   githubUrl: "https://github.com/shawshank725/ordo",
+  //   liveDemoUrl: "https://github.com/shawshank725/ordo/releases/tag/1.1.0",
+  //   // otherImages: [ ordoDelete, ordoOpen, ordoRename]
+  // },
   {
     //projectImage: logo,
     heading: "C.A.L.M App",

@@ -28,3 +28,9 @@ body {
   font-family: "JetBrains Mono", monospace;
 }
 
+.homePageContainer, .experiencePageContainer, 
+.socialsPageContainer, .contributionsPageContainer, 
+.projectsPageContainer, .skillsPageContainer {
+    scroll-margin-top: 80px;
+}
+
