@@ -65,3 +65,16 @@
 .pdfViewerDownloadButton {
     right: 70px;
 }
+
+.pdfLoading,
+.pdfError {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+.pdfError button {
+    margin-top: 12px;
+    padding: 8px 16px;
+    cursor: pointer;
+}

@@ -12,9 +12,12 @@ interface PDFViewerProps {
     onClose: () => void;
 }
 
-export const PDFViewer = ({ pdfPath, onClose }: PDFViewerProps) => {
+const PDFViewer = ({ pdfPath, onClose }: PDFViewerProps) => {
     const pdfContainerRef = useRef<HTMLDivElement>(null);
+
     const [pdfWidth, setPdfWidth] = useState<number>();
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
 
     useEffect(() => {
         document.body.style.overflow = "hidden";
@@ -28,8 +31,7 @@ export const PDFViewer = ({ pdfPath, onClose }: PDFViewerProps) => {
         const updatePdfWidth = () => {
             if (!pdfContainerRef.current) return;
 
-            const width = pdfContainerRef.current.clientWidth;
-            setPdfWidth(width);
+            setPdfWidth(pdfContainerRef.current.clientWidth);
         };
 
         updatePdfWidth();
@@ -50,7 +52,10 @@ export const PDFViewer = ({ pdfPath, onClose }: PDFViewerProps) => {
 
     const getFileName = (path: string): string => {
         const fileName = path.split("/").pop() || "download";
-        return fileName.endsWith(".pdf") ? fileName : `${fileName}.pdf`;
+
+        return fileName.endsWith(".pdf")
+            ? fileName
+            : `${fileName}.pdf`;
     };
 
     const handleDownload = async () => {
@@ -65,6 +70,7 @@ export const PDFViewer = ({ pdfPath, onClose }: PDFViewerProps) => {
             const url = window.URL.createObjectURL(blob);
 
             const link = document.createElement("a");
+
             link.href = url;
             link.download = getFileName(pdfPath);
 
@@ -99,14 +105,44 @@ export const PDFViewer = ({ pdfPath, onClose }: PDFViewerProps) => {
                 ref={pdfContainerRef}
                 className="pdfContainer"
             >
-                <Document file={pdfPath}>
-                    <Page
-                        pageNumber={1}
-                        width={pdfWidth}
-                    />
+                {loading && !error && (
+                    <div className="pdfLoading">
+                        Loading PDF...
+                    </div>
+                )}
+
+                {error && (
+                    <div className="pdfError">
+                        <p>Failed to load PDF.</p>
+
+                        <button onClick={onClose}>
+                            Close
+                        </button>
+                    </div>
+                )}
+
+                <Document
+                    file={pdfPath}
+                    onLoadSuccess={() => {
+                        setLoading(false);
+                        setError(false);
+                    }}
+                    onLoadError={(error) => {
+                        console.error("PDF loading failed:", error);
+                        setLoading(false);
+                        setError(true);
+                    }}
+                >
+                    {!error && pdfWidth && (
+                        <Page
+                            pageNumber={1}
+                            width={pdfWidth}
+                        />
+                    )}
                 </Document>
             </div>
-
         </div>
     );
 };
+
+export default PDFViewer;

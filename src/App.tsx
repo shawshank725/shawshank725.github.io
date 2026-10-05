@@ -9,7 +9,9 @@ import SocialsPage from "@/components/SocialsPage";
 import AchievementsPage from "@/components/Achievements";
 import ExperiencePage from "@/components/ExperiencePage";
 import { pdfjs } from 'react-pdf';
-import { PDFViewer } from "@/components/PDFViewer";
+//import { PDFViewer } from "@/components/PDFViewer";
+import { lazy, Suspense } from "react";
+
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.mjs',
@@ -29,6 +31,7 @@ function App() {
   const [pdfPath, setPdfPath] = useState("");
 
   const date = new Date().getFullYear();
+  const PDFViewer = lazy(() => import("@/components/PDFViewer"));
 
   return (
     <div className="appContainer">
@@ -41,14 +44,14 @@ function App() {
         experiencePageRef={experiencePageRef}
 
         setShowPDFViewer={setShowPDFViewer}
-    setPdfPath={setPdfPath}
+        setPdfPath={setPdfPath}
       />
       <HomePage reference={homePageRef} />
       <ExperiencePage
-    reference={experiencePageRef}
-    setShowPDFViewer={setShowPDFViewer}
-    setPdfPath={setPdfPath}
-/>
+        reference={experiencePageRef}
+        setShowPDFViewer={setShowPDFViewer}
+        setPdfPath={setPdfPath}
+      />
       <SkillsPage reference={skillsPageRef} />
       <ProjectsPage reference={projectsPageRef} />
       <AchievementsPage reference={achievementsPageRef} />
@@ -58,10 +61,12 @@ function App() {
       <p className="copyright">© {date} Shashank Verma. All rights reserved.</p>
 
       {showPDFViewer && (
-        <PDFViewer
-    pdfPath={pdfPath}
-    onClose={() => setShowPDFViewer(false)}
-/>
+        <Suspense fallback={<div>Loading PDF viewer...</div>}>
+          <PDFViewer
+            pdfPath={pdfPath}
+            onClose={() => setShowPDFViewer(false)}
+          />
+        </Suspense>
       )}
     </div>
   )
