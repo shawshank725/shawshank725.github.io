@@ -12,13 +12,11 @@ export default function ProjectsPage({reference}: ReferenceProp) {
                 {
                 projects.map((project)=>(
                     <ProjectCard projectCardType={{
-                        //projectImage: project.projectImage,
                         heading: project.heading,
                         description: project.description,
                         techStack: project.techStack,
                         githubUrl: project.githubUrl,
-                        liveDemoUrl: project.liveDemoUrl,
-                        // otherImages: project.otherImages
+                        liveDemoUrl: project.liveDemoUrl
                     }} />
                 ))
             }

@@ -9,7 +9,6 @@ import SocialsPage from "@/components/SocialsPage";
 import AchievementsPage from "@/components/Achievements";
 import ExperiencePage from "@/components/ExperiencePage";
 import { pdfjs } from 'react-pdf';
-//import { PDFViewer } from "@/components/PDFViewer";
 import { lazy, Suspense } from "react";
 
 
