@@ -8,15 +8,11 @@ type NavigationProps = {
     socialsPageRef: React.RefObject<HTMLDivElement | null>;
     experiencePageRef: React.RefObject<HTMLDivElement | null>;
 
-    setShowPDFViewer: React.Dispatch<React.SetStateAction<boolean>>;
-    setPdfPath: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export default function NavigationBar({ homePageRef, skillsPageRef,
     projectsPageRef, socialsPageRef,
-    experiencePageRef,
-    setShowPDFViewer,
-    setPdfPath
+    experiencePageRef
 }: NavigationProps) {
     return (
         <div className='navigationBarContainer'>
@@ -57,10 +53,12 @@ export default function NavigationBar({ homePageRef, skillsPageRef,
 
 
                 <button
-                    className='navigationItem'
+                    className="navigationItem"
                     onClick={() => {
-                        setPdfPath("/resume/Shashank_Verma_CV.pdf");
-                        setShowPDFViewer(true);
+                        const link = document.createElement("a");
+                        link.href = "/resume/Shashank_Verma_CV.pdf";
+                        link.download = "Shashank_Verma_Resume.pdf";
+                        link.click();
                     }}
                 >
                     Resume

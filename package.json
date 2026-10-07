@@ -16,9 +16,6 @@
     "lucide-react": "^1.8.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-hash-link": "^1.0.2",
-    "react-pdf": "^11.0.0",
-    "react-router-hash-link": "^2.4.3",
     "react-typed": "^2.0.12"
   },
   "devDependencies": {

@@ -3,15 +3,10 @@ import type { ReferenceProp } from '@/types/ReferenceProp';
 import Heading from '@components/Heading';
 import "@styles/ExperiencePage.css";
 
-type ExperiencePageProps = ReferenceProp & {
-  setShowPDFViewer: React.Dispatch<React.SetStateAction<boolean>>;
-  setPdfPath: React.Dispatch<React.SetStateAction<string>>;
-};
+type ExperiencePageProps = ReferenceProp;
 
 export default function ExperiencePage({
-  reference,
-  setShowPDFViewer,
-  setPdfPath
+  reference
 }: ExperiencePageProps) {
   return (
     <div className='experiencePageContainer' ref={reference}>
@@ -25,19 +20,6 @@ export default function ExperiencePage({
                 <span><strong>Role: </strong>{experience.role}</span>
                 <span><strong>Duration: </strong>{experience.duration}</span>
               </div>
-              {
-                experience.certificate && <div className='certificateContainer'>
-                  <button
-                    className='completionCertificateButton'
-                    onClick={() => {
-                      setPdfPath(experience.certificate!);
-                      setShowPDFViewer(true);
-                    }}
-                  >
-                    Completion Certificate
-                  </button>
-                </div>
-              }
             </div>
 
             <ul className='unorderedListForExperience'>
