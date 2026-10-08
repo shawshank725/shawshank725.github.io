@@ -20,7 +20,7 @@ export default function SocialsPage({ reference }: ReferenceProp) {
             window.gtag?.("event", "github_click");
           }}
         >
-          <img src={githubIcon} className="socialIcon" />
+          <img src={githubIcon} alt="GitHub" className="socialIcon" />
           <p>GitHub</p>
         </a>
 
@@ -33,7 +33,7 @@ export default function SocialsPage({ reference }: ReferenceProp) {
             window.gtag?.("event", "linkedin_click");
           }}
         >
-          <img src={linkedinIcon} className="socialIcon" />
+          <img src={linkedinIcon} alt="LinkedIn" className="socialIcon" />
           <p>LinkedIn</p>
         </a>
 

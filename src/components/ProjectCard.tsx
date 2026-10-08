@@ -45,7 +45,7 @@ export default function ProjectCard({ projectCardType }: ProjectCardProp) {
                         className={`projectBtn ${!projectCardType.githubUrl ? 'disabled' : ''}`}
                         target="_blank"
                     >
-                        <img src={githubIcon} className="projectBtnIcon" />
+                        <img src={githubIcon} alt="GitHub" className="projectBtnIcon" />
                         <span>Code</span>
                     </a>
 

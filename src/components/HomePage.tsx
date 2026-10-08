@@ -8,7 +8,7 @@ export default function HomePage({ reference }: ReferenceProp) {
         <div className="homePageContainer" ref={reference}>
             <div className='introductionProfilePhotoContainer'>
                 <div className='profilePhotoTypewriterContainer'>
-                    <img src={profilePhoto} className='profilePhoto' />
+                    <img src={profilePhoto} alt="Shashank profile photo" className='profilePhoto' />
                     <ReactTyped
                         strings={[
                             "Hi there!", "I'm Shashank"
