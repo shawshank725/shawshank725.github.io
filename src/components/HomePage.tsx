@@ -37,6 +37,17 @@ export default function HomePage({ reference }: ReferenceProp) {
                             and working with <strong>Linux and backend technologies</strong>. My other interests
                             include <strong>ethical hacking</strong> and <strong>game development</strong>.
                         </span> */}
+                        <button
+                            className="resumeButton"
+                            onClick={() => {
+                                const link = document.createElement("a");
+                                link.href = "/resume/Shashank_Verma_CV.pdf";
+                                link.download = "Shashank_Verma_Resume.pdf";
+                                link.click();
+                            }}
+                        >
+                            Download Resume
+                        </button>
                     </div>
                 </div>
             </div>
