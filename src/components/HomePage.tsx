@@ -31,12 +31,12 @@ export default function HomePage({ reference }: ReferenceProp) {
                             contributed to <strong>open-source projects</strong>, and built and published a
                             <strong> mobile application on Google Play Store</strong>.
                         </span>
-
+{/* 
                         <span className="introductionText">
                             I enjoy building practical software, exploring <strong>AI-assisted development</strong>,
                             and working with <strong>Linux and backend technologies</strong>. My other interests
                             include <strong>ethical hacking</strong> and <strong>game development</strong>.
-                        </span>
+                        </span> */}
                     </div>
                 </div>
             </div>

@@ -12,16 +12,16 @@ export const projects: ProjectCardType[] = [
 
   {
     heading: "C.A.L.M App",
-    description: "Mental Well-being",
-    techStack: "React Native, TypeScript, Expo Go, React Query, Supabase",
+    description: "Mental Well-being mobile application",
+    techStack: "React Native, TypeScript, Expo Go, Supabase",
     githubUrl: "https://github.com/shawshank725/calm-android-app-final",
     liveDemoUrl: "https://play.google.com/store/apps/details?id=com.calmspace.helpdeskapp&pcampaignid=web_share"
   },
-  {
-    heading: "Forsaken Labyrinth",
-    description: "2D platformer game",
-    techStack: "GDScript, Godot",
-    githubUrl: "https://github.com/shawshank725/forsakenLabyrinth",
-    liveDemoUrl: "https://shawshank725.github.io/forsakenLabyrinth/",
-  }
+  // {
+  //   heading: "Forsaken Labyrinth",
+  //   description: "2D platformer game",
+  //   techStack: "GDScript, Godot",
+  //   githubUrl: "https://github.com/shawshank725/forsakenLabyrinth",
+  //   liveDemoUrl: "https://shawshank725.github.io/forsakenLabyrinth/",
+  // }
 ];

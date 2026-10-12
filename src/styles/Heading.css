@@ -1,13 +1,12 @@
 .heading {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     margin-top: 0px;
     margin-bottom: 10px;
     text-align: left;
     color: #1E40AF;
-    padding-bottom: 4px;
-    border-bottom: solid 3px #1E40AF;
-}
+    padding-bottom: 0px;
+    }
 
 .headingContainer {
     display: flex;
